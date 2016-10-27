@@ -4,7 +4,7 @@ rm -rf ~/.vim*
 
 
 # install xkb-switch
-sudo apt install xorg-dev
+sudo apt install xorg-dev cmake
 
 cd ~/
 mkdir tmp_xkb
