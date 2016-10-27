@@ -44,6 +44,7 @@ Plug 'majutsushi/tagbar'
 Plug 'scrooloose/syntastic'
 Plug 'Yggdroot/indentLine'
 Plug 'avelino/vim-bootstrap-updater'
+Plug 'lyokha/vim-xkbswitch'
 
 let g:make = 'gmake'
 if system('uname -o') =~ '^GNU/'
@@ -546,3 +547,11 @@ else
   let g:airline_symbols.readonly = ''
   let g:airline_symbols.linenr = ''
 endif
+
+
+"****************************************************************************
+"" Rus Keymap Settings 
+"****************************************************************************
+let g:XkbSwitchEnabled = 1
+let g:XkbSwitchLib = '/usr/local/lib/libxkbswitch.so'
+let g:XkbSwitchIMappings = ['ru']
