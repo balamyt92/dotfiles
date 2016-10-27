@@ -3,7 +3,7 @@
 #### Install minimall soft
 
 echo 'Установка пакетов программного обеспечения (необходимы root права)...'
-apt install -y zsh zsh-syntax-highlighting vim htop atop nomacs virtualbox-qt vlc qbittorrent
+apt install -y zsh zsh-syntax-highlighting vim htop atop nomacs virtualbox-qt vlc qbittorrent git exuberant-ctags ncurses-term python-jinja2 curl
 
 
 #### Install configs
