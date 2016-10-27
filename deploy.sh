@@ -3,7 +3,7 @@
 #### Install minimall soft
 
 echo 'Установка пакетов программного обеспечения (необходимы root права)...'
-sudp apt update
+sudo apt update
 sudo apt install -y zsh zsh-syntax-highlighting vim htop atop
 sudo apt install -y nomacs virtualbox-qt vlc qbittorrent git exuberant-ctags ncurses-term python-jinja2 curl
 
