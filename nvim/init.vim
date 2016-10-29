@@ -69,9 +69,9 @@ endif
 Plug 'honza/vim-snippets'
 
 "" Color
-Plug 'tomasr/molokai'
+" Plug 'tomasr/molokai'
 Plug 'nanotech/jellybeans.vim'
-Plug 'altercation/vim-colors-solarized'
+" Plug 'altercation/vim-colors-solarized'
 "" Custom bundles
 "" Python Bundle
 Plug 'davidhalter/jedi-vim'
@@ -515,7 +515,7 @@ else
 endif
 
 "****************************************************************************
-"" rus keymap settings 
+"" rus keymap settins
 "****************************************************************************
 let g:XkbSwitchEnabled = 1
 let g:XkbSwitchLib = '/usr/local/lib/libxkbswitch.so'
