@@ -550,8 +550,8 @@ endif
 
 
 "****************************************************************************
-"" Rus Keymap Settings
+"" rus keymap settings
 "****************************************************************************
-let g:XkbSwitchEnabled = 1
-let g:XkbSwitchLib = '/usr/local/lib/libxkbswitch.so'
-let g:XkbSwitchIMappings = ['ru']
+let g:xkbswitchenabled = 1
+let g:xkbswitchlib = '/usr/local/lib/libxkbswitch.so'
+let g:xkbswitchimappings = ['ru']
