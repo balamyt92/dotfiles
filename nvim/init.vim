@@ -515,7 +515,7 @@ else
 endif
 
 "****************************************************************************
-"" rus keymap settins
+"" rus keymap settings
 "****************************************************************************
 let g:XkbSwitchEnabled = 1
 let g:XkbSwitchLib = '/usr/local/lib/libxkbswitch.so'
