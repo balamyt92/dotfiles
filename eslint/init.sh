@@ -1,2 +1,2 @@
 #!/bin/bash
-ln -s ~/dotfiles/eslint/.eslintrc ~/.eslintrc
+ln -s ~/dotfiles/eslint/eslintrc ~/.eslintrc

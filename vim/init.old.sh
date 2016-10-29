@@ -18,4 +18,4 @@
 # rm -rf tmp_xkb
 
 # # make simlink
-# ln -s ~/dotfiles/vim/.vimrc ~/.vimrc
+# ln -s ~/dotfiles/vim/vimrc ~/.vimrc
