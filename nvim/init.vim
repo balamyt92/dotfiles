@@ -78,6 +78,12 @@ Plug 'davidhalter/jedi-vim'
 
 "" Javascript Bundle
 Plug 'jelera/vim-javascript-syntax'
+Plug 'pangloss/vim-javascript'
+Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'othree/yajs.vim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'elzr/vim-json'
+
 
 "" HTML Bundle
 Plug 'amirh/HTML-AutoCloseTag'
@@ -468,7 +474,25 @@ augroup vimrc-javascript
   autocmd FileType javascript set tabstop=4|set shiftwidth=4|set expandtab softtabstop=4 smartindent
 augroup END
 
+let g:javascript_plugin_jsdoc = 1
 
+" let g:javascript_conceal_function       = "ƒ"
+" let g:javascript_conceal_null           = "ø"
+" let g:javascript_conceal_this           = "@"
+" let g:javascript_conceal_return         = "⇚"
+" let g:javascript_conceal_undefined      = "¿"
+" let g:javascript_conceal_NaN            = "ℕ"
+" let g:javascript_conceal_prototype      = "¶"
+" let g:javascript_conceal_static         = "•"
+" let g:javascript_conceal_super          = "Ω"
+" let g:javascript_conceal_arrow_function = "⇒"
+
+
+"" https://github.com/othree/javascript-libraries-syntax.vim
+let g:used_javascript_libs = 'jquery,underscore,backbone,react'
+
+" Use deoplete. https://github.com/Shougo/deoplete.nvim
+let g:deoplete#enable_at_startup = 1
 
 "" Include user's local vim config
 if filereadable(expand("~/.config/nvim/local_init.vim"))
