@@ -11,6 +11,12 @@ sudo apt install -y zsh zsh-syntax-highlighting htop atop
 sudo apt install -y nomacs virtualbox-qt vlc qbittorrent git exuberant-ctags ncurses-term python-jinja2 curl
 sudo apt install -y xorg-dev cmake xclip
 
+# Node Install
+sudo apt install -y nodejs npm
+sudo ln -s /usr/bin/nodejs /usr/bin/node
+echo 'Node package install'
+sudo npm i -g eslint eslint-config-airbnb
+
 #### Install configs
 
 echo 'Установка настроек и создание симлинков...\n'
