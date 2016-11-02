@@ -45,6 +45,7 @@ Plug 'scrooloose/syntastic'
 Plug 'Yggdroot/indentLine'
 "Plug 'avelino/vim-bootstrap-updater'
 Plug 'lyokha/vim-xkbswitch'
+Plug 'terryma/vim-multiple-cursors'
 
 let g:make = 'gmake'
 if system('uname -o') =~ '^GNU/'
