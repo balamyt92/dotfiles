@@ -147,7 +147,7 @@ set noswapfile
 
 set fileformats=unix,dos,mac
 set showcmd
-set shell=/bin/sh
+set shell=/bin/zsh
 
 " session management
 let g:session_directory = "~/.config/nvim/session"
