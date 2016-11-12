@@ -37,9 +37,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-scripts/grep.vim'
-Plug 'vim-scripts/CSApprox'
 Plug 'bronson/vim-trailing-whitespace'
-Plug 'Raimondi/delimitMate'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/syntastic'
 Plug 'Yggdroot/indentLine'
@@ -62,7 +60,7 @@ if v:version >= 703
 endif
 
 if v:version >= 704
-  "" Snippets
+  " Snippets
   " Plug 'SirVer/ultisnips'
   Plug 'FelikZ/ctrlp-py-matcher'
 endif
