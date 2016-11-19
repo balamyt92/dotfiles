@@ -474,6 +474,7 @@ let g:javascript_enable_domhtmlcss = 1
 augroup vimrc-javascript
   autocmd!
   autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2 smartindent
+  autocmd FileType javascript.jsx set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2 smartindent
 augroup END
 
 let g:javascript_plugin_jsdoc = 1
