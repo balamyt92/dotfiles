@@ -138,6 +138,8 @@ set smartcase
 set bomb
 set binary
 
+"" Cursor line highlight
+set cursorline
 
 "" Directories for swp files
 set nobackup
