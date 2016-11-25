@@ -18,7 +18,7 @@ pip3 install neovim
 sudo apt install -y nodejs npm
 sudo ln -s /usr/bin/nodejs /usr/bin/node
 echo 'Node package install'
-sudo npm i -g eslint eslint-config-airbnb
+sudo npm i -g eslint eslint-config-standard eslint-plugin-standard eslint-plugin-promise
 
 #### Install configs
 
