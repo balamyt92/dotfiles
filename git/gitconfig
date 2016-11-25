@@ -3,3 +3,5 @@
 	name = Anatoly Medvedev
 [push]
 	default = simple
+[github]
+	user = balamyt92
