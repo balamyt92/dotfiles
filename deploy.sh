@@ -45,7 +45,6 @@ rm -rf ~/.config/nvim
 mkdir ~/.config/nvim
 ln -s ~/dotfiles/nvim/init.vim ~/.config/nvim/init.vim
 
-
 # git config
 rm -rf ~/.gitconfig
 ln -s ~/dotfiles/git/gitconfig ~/.gitconfig
@@ -59,3 +58,12 @@ rm -rf ~/.config/ranger
 mkdir ~/.config/ranger
 ln -s ~/dotfiles/ranger/rc.conf ~/.config/ranger/rc.conf
 ranger --copy-config=scope
+
+# tmux
+rm ~/.tmux.conf
+ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
+
+# tern
+rm ~/.tern-project
+ln -s ~/dotfiles/tern/tern-project.js.exaple ~/.tern-project
+

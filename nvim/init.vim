@@ -296,7 +296,7 @@ if executable('ag')
 endif
 
 cnoremap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
-noremap <leader>b :CtrlPBuffer<CR>
+noremap <leader>b :CtrlP<CR>
 let g:ctrlp_map = '<leader>e'
 let g:ctrlp_open_new_file = 'r'
 let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
@@ -408,22 +408,22 @@ let g:javascript_plugin_jsdoc = 1
 let g:used_javascript_libs = 'jquery,underscore,backbone,react'
 
 " Use deoplete. https://github.com/Shougo/deoplete.nvim
+set completeopt+=noinsert           " omnicompletion options
+set completeopt+=noselect
+set completeopt-=preview
+set omnifunc=syntaxcomplete#Complete
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#omni_patterns = {}
+let g:deoplete#omni_patterns.javascript = '\.\w*$|^\s*@\w*$|'
+let g:deoplete#omni_patterns.php = '\h\w*\|[^. \t]->\%(\h\w*\)\?\|\h\w*::\%(\h\w*\)\?'
 let g:deoplete#omni#functions = {}
-let g:deoplete#omni#functions.javascript = [
-	\ 'tern#Complete',
-	\ 'jspc#omni',
-	\ ]
+let g:deoplete#omni#functions.javascript = ['tern#Complete', 'jspc#omni',]
 
 let g:tern_request_timeout = 1
 let g:tern_show_signature_in_pum = '0'  " This do disable full signature type on autocomplete
 
 "Add extra filetypes
-let g:tern#filetypes = [
-	\ 'jsx',
-	\ 'javascript.jsx',
-	\ 'vue',
-	\ ]
+let g:tern#filetypes = ['jsx', 'javascript.jsx', 'vue',]
 
 "" Include user's local vim config
 if filereadable(expand("~/.config/nvim/local_init.vim"))
