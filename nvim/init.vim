@@ -71,6 +71,7 @@ Plug 'mattn/emmet-vim'
 
 "" PHP Bundle
 Plug 'arnaud-lb/vim-php-namespace'
+Plug 'padawan-php/deoplete-padawan'
 
 call plug#end()
 
@@ -112,7 +113,7 @@ set bomb
 set binary
 
 "" Cursor line highlight
-set cursorline
+"" set cursorline
 
 "" Directories for swp files
 set nobackup
