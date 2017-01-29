@@ -5,7 +5,7 @@ if has('vim_starting')
   set nocompatible               " Be iMproved
 endif
 
-set guifont=Consolas\ Italic\ Nerd\ Font\ Plus\ Font\ Awesome\ Plus\ Font\ Awesome\ Extension\ Plus\ Power\ Symbols\ Plus\ Pomicons\ Plus\ Font\ Linux:h16
+set guifont=Consolas\ Nerd\ Font:h16
 let vimplug_exists=expand('~/.config/nvim/autoload/plug.vim')
 
 if !filereadable(vimplug_exists)
