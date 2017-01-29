@@ -40,6 +40,7 @@ Plug 'scrooloose/syntastic'
 Plug 'Yggdroot/indentLine'
 Plug 'lyokha/vim-xkbswitch'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'jiangmiao/auto-pairs'
 
 if v:version >= 704
   " Snippets
@@ -58,8 +59,9 @@ Plug 'nanotech/jellybeans.vim'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'pangloss/vim-javascript'
 Plug 'othree/javascript-libraries-syntax.vim'
-Plug 'othree/yajs.vim'
+Plug 'othree/yajs.vim', { 'for': 'javascript' }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'carlitux/deoplete-ternjs', { 'do': 'sudo npm install -g tern' }
 Plug 'elzr/vim-json'
 
 
@@ -134,40 +136,11 @@ set number
 
 let no_buffers_menu=1
 if !exists('g:not_finish_vimplug')
-  " colorscheme molokai
   colorscheme jellybeans
-
-  " let g:solarized_termcolors=256
-  " set background=dark
-  " colorscheme solarized
 endif
 
 set mousemodel=popup
-set t_Co=256
-set guioptions=egmrti
-set gfn=Monospace\ 10
-
-if has("gui_running")
-  if has("gui_mac") || has("gui_macvim")
-    set guifont=Menlo:h12
-    set transparency=7
-  endif
-else
-  let g:CSApprox_loaded = 1
-
-  " IndentLine
-  let g:indentLine_enabled = 1
-  let g:indentLine_concealcursor = 0
-  let g:indentLine_char = '┆'
-  let g:indentLine_faster = 1
-
-
-endif
-
-if &term =~ '256color'
-  set t_ut=
-endif
-
+set termguicolors
 "" Disable the blinking cursor.
 set gcr=a:blinkon0
 set scrolloff=3
@@ -408,46 +381,54 @@ augroup vimrc-python
 augroup END
 
 " syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:javascript_enable_domhtmlcss = 1
 let g:syntastic_python_checkers=['python', 'flake8']
 let g:syntastic_javascript_checkers = ['eslint']
-
-let g:javascript_enable_domhtmlcss = 1
 
 " vim-javascript
 augroup vimrc-javascript
   autocmd!
-  autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2 smartindent
   autocmd FileType javascript.jsx set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2 smartindent
+  autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2 smartindent
+  autocmd FileType javascript.jsx set omnifunc=javascriptcomplete#CompleteJS
+  autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 augroup END
 
 let g:javascript_plugin_jsdoc = 1
-
-" let g:javascript_conceal_function       = "ƒ"
-" let g:javascript_conceal_null           = "ø"
-" let g:javascript_conceal_this           = "@"
-" let g:javascript_conceal_return         = "⇚"
-" let g:javascript_conceal_undefined      = "¿"
-" let g:javascript_conceal_NaN            = "ℕ"
-" let g:javascript_conceal_prototype      = "¶"
-" let g:javascript_conceal_static         = "•"
-" let g:javascript_conceal_super          = "Ω"
-" let g:javascript_conceal_arrow_function = "⇒"
-
 
 "" https://github.com/othree/javascript-libraries-syntax.vim
 let g:used_javascript_libs = 'jquery,underscore,backbone,react'
 
 " Use deoplete. https://github.com/Shougo/deoplete.nvim
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#omni#functions = {}
+let g:deoplete#omni#functions.javascript = [
+	\ 'tern#Complete',
+	\ 'jspc#omni',
+	\ ]
+
+let g:tern_request_timeout = 1
+let g:tern_show_signature_in_pum = '0'  " This do disable full signature type on autocomplete
+
+"Add extra filetypes
+let g:tern#filetypes = [
+	\ 'jsx',
+	\ 'javascript.jsx',
+	\ 'vue',
+	\ ]
 
 "" Include user's local vim config
 if filereadable(expand("~/.config/nvim/local_init.vim"))
   source ~/.config/nvim/local_init.vim
 endif
-
-"*****************************************************************************
-"" Convenience variables
-"*****************************************************************************
 
 "****************************************************************************
 "" rus keymap settings
