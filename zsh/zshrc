@@ -50,7 +50,7 @@ HIST_STAMPS="mm/dd/yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git ubuntu vagrant git-extras yii2 sublime sudo github gitignore git-remote-branch composer)
+plugins=(git ubuntu vagrant git-extras yii2 sublime sudo github gitignore git-remote-branch composer nvm)
 
 # User configuration
 
@@ -84,3 +84,8 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias v="nvim"
+
+export NVM_DIR="/home/medvedev/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export RANGER_LOAD_DEFAULT_RC=FALSE

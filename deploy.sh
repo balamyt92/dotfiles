@@ -1,29 +1,62 @@
 #!/bin/bash
 
-#### Install minimall soft
-
-echo 'Установка пакетов программного обеспечения (необходимы root права)...'
-#### Install nvim
-sudo add-apt-repository -y ppa:neovim-ppa/unstable
-sudo apt update
-sudo apt install -y neovim
-sudo apt install -y zsh zsh-syntax-highlighting htop atop
-sudo apt install -y nomacs virtualbox-qt vlc qbittorrent git exuberant-ctags ncurses-term python-jinja2 curl
-sudo apt install -y xorg-dev cmake xclip
-
-sudo apt onstall -y python3
-pip3 install neovim
-
-# Node Install
-sudo apt install -y nodejs npm
-sudo ln -s /usr/bin/nodejs /usr/bin/node
-echo 'Node package install'
-sudo npm i -g eslint eslint-config-standard eslint-plugin-standard eslint-plugin-promise
+# Node Install (optional)
+#sudo ln -s /usr/bin/nodejs /usr/bin/node
+#echo 'Node package install'
+#sudo npm i -g eslint eslint-config-standard eslint-plugin-standard eslint-plugin-promise
 
 #### Install configs
 
-echo 'Установка настроек и создание симлинков...\n'
-for file in $(find ~/dotfiles | grep init.sh)
-do
-   bash $file
-done
+bash softs.sh
+
+
+# Config deploy
+cd ~/
+
+
+rm -rf ~/.zsh*
+rm -rf ~/.oh-my-zsh
+rm ~/.zshrc
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+ln -s ~/dotfiles/zsh/zshrc ~/.zshrc
+ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
+
+
+
+## NVIM install config
+# clear old conf
+rm -rf ~/.config/nvim
+
+# install xkb-switch
+
+cd ~/
+mkdir tmp_xkb
+cd tmp_xkb
+git clone https://github.com/ierton/xkb-switch.git
+cd xkb-switch
+mkdir build && cd build
+cmake ..
+make
+sudo make install
+cd ~/
+rm -rf tmp_xkb
+
+
+# make simlink
+mkdir ~/.config/nvim
+ln -s ~/dotfiles/nvim/init.vim ~/.config/nvim/init.vim
+
+
+# git config
+rm -rf ~/.gitconfig
+ln -s ~/dotfiles/git/gitconfig ~/.gitconfig
+
+# eslint config config
+rm -rf ~/.eslintrc
+ln -s ~/dotfiles/eslint/eslintrc ~/.eslintrc
+
+# ranger conf
+rm -rf ~/.config/ranger
+mkdir ~/.config/ranger
+ln -s ~/dotfiles/ranger/rc.conf ~/.config/ranger/rc.conf
+ranger --copy-config=scope
