@@ -54,10 +54,10 @@ rm -rf ~/.eslintrc
 ln -s ~/dotfiles/eslint/eslintrc ~/.eslintrc
 
 # ranger conf
-rm -rf ~/.config/ranger
-mkdir ~/.config/ranger
-ln -s ~/dotfiles/ranger/rc.conf ~/.config/ranger/rc.conf
-ranger --copy-config=scope
+# rm -rf ~/.config/ranger
+# mkdir ~/.config/ranger
+# ln -s ~/dotfiles/ranger/rc.conf ~/.config/ranger/rc.conf
+# ranger --copy-config=scope
 
 # tmux
 rm ~/.tmux.conf

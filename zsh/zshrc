@@ -88,4 +88,4 @@ alias v="nvim"
 export NVM_DIR="/home/medvedev/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
-export RANGER_LOAD_DEFAULT_RC=FALSE
+# export RANGER_LOAD_DEFAULT_RC=FALSE
