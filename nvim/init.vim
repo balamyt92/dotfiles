@@ -45,11 +45,11 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'xolox/vim-misc'
 Plug 'HHammond/vim-easytags'
 Plug 'mileszs/ack.vim'
-
+Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips'
 
 if v:version >= 704
   " Snippets
-  " Plug 'SirVer/ultisnips'
   Plug 'FelikZ/ctrlp-py-matcher'
 endif
 
@@ -308,7 +308,8 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 let g:UltiSnipsEditSplit="vertical"
-
+let g:UltiSnipsSnippetsDir='~/dotfiles/nvim/UltiSnips/'
+let g:UltiSnipsSnippetDirectories=["UltiSnips"]
 " syntastic
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_error_symbol='✗'
@@ -406,7 +407,7 @@ set completeopt+=noinsert           " omnicompletion options
 set completeopt+=noselect
 set completeopt-=preview
 set omnifunc=syntaxcomplete#Complete
-let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_at_startup = 3
 let g:deoplete#omni_patterns = {}
 let g:deoplete#omni_patterns.javascript = '\.\w*$|^\s*@\w*$|'
 let g:deoplete#omni_patterns.php = '\h\w*\|[^. \t]->\%(\h\w*\)\?\|\h\w*::\%(\h\w*\)\?'
