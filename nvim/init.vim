@@ -41,6 +41,11 @@ Plug 'Yggdroot/indentLine'
 Plug 'lyokha/vim-xkbswitch'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'jiangmiao/auto-pairs'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'xolox/vim-misc'
+Plug 'HHammond/vim-easytags'
+Plug 'mileszs/ack.vim'
+
 
 if v:version >= 704
   " Snippets
@@ -52,29 +57,26 @@ endif
 " Plug 'tomasr/molokai'
 Plug 'nanotech/jellybeans.vim'
 " Plug 'altercation/vim-colors-solarized'
-"" Custom bundles
-"" Python Bundle
 
 "" Javascript Bundle
-Plug 'jelera/vim-javascript-syntax'
-Plug 'pangloss/vim-javascript'
-Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'othree/javascript-libraries-syntax.vim', { 'for': 'javascript' }
 Plug 'othree/yajs.vim', { 'for': 'javascript' }
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'carlitux/deoplete-ternjs', { 'do': 'sudo npm install -g tern' }
-Plug 'elzr/vim-json'
+Plug 'carlitux/deoplete-ternjs', { 'do': 'sudo npm install -g tern', 'for': ['javascript', 'json', 'jsx']  }
+Plug 'elzr/vim-json', { 'for': ['javascript', 'json'] }
 
 
 "" HTML Bundle
 "" Plug 'amirh/HTML-AutoCloseTag'
-Plug 'hail2u/vim-css3-syntax'
-Plug 'gorodinskiy/vim-coloresque'
-Plug 'tpope/vim-haml'
-Plug 'mattn/emmet-vim'
+Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'html', 'html5']}
+Plug 'gorodinskiy/vim-coloresque', { 'for': 'css' }
+Plug 'mattn/emmet-vim', { 'for': ['html', 'html5'] }
 
 "" PHP Bundle
-Plug 'arnaud-lb/vim-php-namespace'
-Plug 'padawan-php/deoplete-padawan'
+Plug 'arnaud-lb/vim-php-namespace', { 'for': 'php'}
+Plug 'padawan-php/deoplete-padawan', { 'for': 'php'}
+Plug 'shawncplus/phpcomplete.vim', { 'for': 'php'}
 
 call plug#end()
 
@@ -100,7 +102,7 @@ set shiftwidth=4
 set expandtab
 
 "" Map leader to ,
-let mapleader=','
+let mapleader=' '
 
 "" Enable hidden buffers
 set hidden
@@ -351,7 +353,7 @@ noremap <leader>w :bn<CR>
 noremap <leader>c :bd<CR>
 
 "" Clean search (highlight)
-nnoremap <silent> <leader><space> :noh<cr>
+nnoremap <silent> <leader>f :noh<cr>
 
 "" Switching windows
 noremap <C-j> <C-w>j
@@ -371,14 +373,6 @@ vnoremap K :m '<-2<CR>gv=gv
 nnoremap <Leader>o :.Gbrowse<CR>
 
 "" Custom configs
-
-" vim-python
-augroup vimrc-python
-  autocmd!
-  autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 colorcolumn=79
-      \ formatoptions+=croq softtabstop=4 smartindent
-      \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
-augroup END
 
 " syntastic
 set statusline+=%#warningmsg#
@@ -436,3 +430,9 @@ endif
 let g:XkbSwitchEnabled = 1
 let g:XkbSwitchLib = '/usr/local/lib/libxkbswitch.so'
 let g:XkbSwitchIMappings = ['ru']
+
+" ctags
+let g:easytags_file = './tags'
+let g:easytags_auto_highlight = 0
+let g:easytags_events = ['BufWritePost']
+let g:easytags_async = 1
