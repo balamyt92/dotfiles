@@ -96,10 +96,10 @@ set fileencodings=utf-8
 set backspace=indent,eol,start
 
 "" Tabs. May be overriten by autocmd rules
-set tabstop=4
-set softtabstop=0
-set shiftwidth=4
-set expandtab
+" set tabstop=4
+" set softtabstop=0
+" set shiftwidth=4
+" set expandtab
 
 "" Map leader to ,
 let mapleader=' '
@@ -387,7 +387,8 @@ let g:syntastic_check_on_wq = 0
 let g:javascript_enable_domhtmlcss = 1
 let g:syntastic_python_checkers=['python', 'flake8']
 let g:syntastic_javascript_checkers = ['eslint']
-
+let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
+let g:syntastic_php_phpcs_args='--standard=PEAR --sniffs=Generic.PHP.LowerCaseConstant'
 " vim-javascript
 augroup vimrc-javascript
   autocmd!
@@ -437,3 +438,5 @@ let g:easytags_file = './tags'
 let g:easytags_auto_highlight = 0
 let g:easytags_events = ['BufWritePost']
 let g:easytags_async = 1
+
+set expandtab ts=4 sw=4 ai
