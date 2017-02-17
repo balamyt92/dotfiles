@@ -53,7 +53,7 @@ g:ctrlp_user_command	/home/medvedev/dotfiles/nvim/init.vim	/^  let g:ctrlp_user_
 g:ctrlp_user_command	/home/medvedev/dotfiles/nvim/init.vim	/^let g:ctrlp_user_command = "find %s -type f | grep -Ev '"+ g:ctrlp_custom_ignore +"'"$/;"	v	language:Vim
 g:ctrlp_use_caching	/home/medvedev/dotfiles/nvim/init.vim	/^  let g:ctrlp_use_caching = 0$/;"	v	language:Vim
 g:ctrlp_use_caching	/home/medvedev/dotfiles/nvim/init.vim	/^let g:ctrlp_use_caching = 1$/;"	v	language:Vim
-g:deoplete#enable_at_startup	/home/medvedev/dotfiles/nvim/init.vim	/^let g:deoplete#enable_at_startup = 1$/;"	v	language:Vim
+g:deoplete#enable_at_startup	/home/medvedev/dotfiles/nvim/init.vim	/^let g:deoplete#enable_at_startup = 3$/;"	v	language:Vim
 g:deoplete#omni#functions	/home/medvedev/dotfiles/nvim/init.vim	/^let g:deoplete#omni#functions = {}$/;"	v	language:Vim
 g:deoplete#omni#functions	/home/medvedev/dotfiles/nvim/init.vim	/^let g:deoplete#omni#functions.javascript = ['tern#Complete', 'jspc#omni',]$/;"	v	language:Vim
 g:deoplete#omni_patterns	/home/medvedev/dotfiles/nvim/init.vim	/^let g:deoplete#omni_patterns = {}$/;"	v	language:Vim
@@ -82,6 +82,8 @@ g:syntastic_check_on_open	/home/medvedev/dotfiles/nvim/init.vim	/^let g:syntasti
 g:syntastic_check_on_wq	/home/medvedev/dotfiles/nvim/init.vim	/^let g:syntastic_check_on_wq = 0$/;"	v	language:Vim
 g:syntastic_error_symbol	/home/medvedev/dotfiles/nvim/init.vim	/^let g:syntastic_error_symbol='✗'$/;"	v	language:Vim
 g:syntastic_javascript_checkers	/home/medvedev/dotfiles/nvim/init.vim	/^let g:syntastic_javascript_checkers = ['eslint']$/;"	v	language:Vim
+g:syntastic_php_checkers	/home/medvedev/dotfiles/nvim/init.vim	/^let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']$/;"	v	language:Vim
+g:syntastic_php_phpcs_args	/home/medvedev/dotfiles/nvim/init.vim	/^let g:syntastic_php_phpcs_args='--standard=PEAR --sniffs=Generic.PHP.LowerCaseConstant'$/;"	v	language:Vim
 g:syntastic_python_checkers	/home/medvedev/dotfiles/nvim/init.vim	/^let g:syntastic_python_checkers=['python', 'flake8']$/;"	v	language:Vim
 g:syntastic_style_error_symbol	/home/medvedev/dotfiles/nvim/init.vim	/^let g:syntastic_style_error_symbol = '✗'$/;"	v	language:Vim
 g:syntastic_style_warning_symbol	/home/medvedev/dotfiles/nvim/init.vim	/^let g:syntastic_style_warning_symbol = '⚠'$/;"	v	language:Vim
@@ -94,6 +96,8 @@ g:UltiSnipsEditSplit	/home/medvedev/dotfiles/nvim/init.vim	/^let g:UltiSnipsEdit
 g:UltiSnipsExpandTrigger	/home/medvedev/dotfiles/nvim/init.vim	/^let g:UltiSnipsExpandTrigger="<tab>"$/;"	v	language:Vim
 g:UltiSnipsJumpBackwardTrigger	/home/medvedev/dotfiles/nvim/init.vim	/^let g:UltiSnipsJumpBackwardTrigger="<c-b>"$/;"	v	language:Vim
 g:UltiSnipsJumpForwardTrigger	/home/medvedev/dotfiles/nvim/init.vim	/^let g:UltiSnipsJumpForwardTrigger="<tab>"$/;"	v	language:Vim
+g:UltiSnipsSnippetDirectories	/home/medvedev/dotfiles/nvim/init.vim	/^let g:UltiSnipsSnippetDirectories=["UltiSnips"]$/;"	v	language:Vim
+g:UltiSnipsSnippetsDir	/home/medvedev/dotfiles/nvim/init.vim	/^let g:UltiSnipsSnippetsDir='~\/dotfiles\/nvim\/UltiSnips\/'$/;"	v	language:Vim
 g:used_javascript_libs	/home/medvedev/dotfiles/nvim/init.vim	/^let g:used_javascript_libs = 'jquery,underscore,backbone,react'$/;"	v	language:Vim
 g:vimshell_prompt	/home/medvedev/dotfiles/nvim/init.vim	/^let g:vimshell_prompt =  '$ '$/;"	v	language:Vim
 g:vimshell_user_prompt	/home/medvedev/dotfiles/nvim/init.vim	/^let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'$/;"	v	language:Vim

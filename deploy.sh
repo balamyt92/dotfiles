@@ -7,7 +7,7 @@
 
 #### Install softs
 
-bash softs.sh
+#bash softs.sh
 
 
 # Config deploy
