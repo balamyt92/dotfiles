@@ -40,6 +40,10 @@ chmod +x ~/.bin/phpctags
 mkdir -p ~/.tmux/plugins/tpm
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
+# fuck
+sudo apt-get install python-pip python-dev
+sudo pip install psutil thefuck
+
 
 # PHP switch
 # sudo apt install php7.0 php5.6 php5.6-mysql php-gettext php5.6-mbstring php-mbstring php7.0-mbstring php-xdebug libapache2-mod-php5.6 libapache2-mod-php7.0
