@@ -86,6 +86,7 @@ bindkey '^ ' autosuggest-accept
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+eval $(thefuck --alias)
 alias v="nvim"
 alias tags="ctags -R --fields=+laimS --languages=php"
 RPROMPT="%(?,%{$fg[green]%}^_^%{$reset_color%},%{$fg[red]%}O_o%{$reset_color%}"
