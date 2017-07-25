@@ -7,3 +7,4 @@ sudo a2ensite $1.conf
 echo "127.0.1.1      $1" | sudo tee -a /etc/hosts
 mkdir /var/www/$1
 sudo service apache2 reload
+mysql -u root -proot -e "create database $1"
