@@ -66,7 +66,7 @@ export LANG=ru_RU.UTF-8
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='nvim'
+  export EDITOR='vim'
 fi
 
 # Compilation flags
@@ -86,9 +86,7 @@ bindkey '^ ' autosuggest-accept
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-eval $(thefuck --alias)
-alias v="nvim"
-alias tags="ctags -R --fields=+laimS --languages=php"
+alias v="vim"
 RPROMPT="%(?,%{$fg[green]%}^_^%{$reset_color%},%{$fg[red]%}O_o%{$reset_color%}"
 
 export NVM_DIR="/home/medvedev/.nvm"
@@ -98,3 +96,4 @@ if [ -f ~/.config/exercism/exercism_completion.zsh ]; then
   . ~/.config/exercism/exercism_completion.zsh
 fi
 # export RANGER_LOAD_DEFAULT_RC=FALSE
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
