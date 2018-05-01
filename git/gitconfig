@@ -5,3 +5,5 @@
 	default = simple
 [github]
 	user = balamyt92
+[core]
+	autocrlf = input

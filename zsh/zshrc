@@ -93,4 +93,8 @@ RPROMPT="%(?,%{$fg[green]%}^_^%{$reset_color%},%{$fg[red]%}O_o%{$reset_color%}"
 
 export NVM_DIR="/home/medvedev/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+if [ -f ~/.config/exercism/exercism_completion.zsh ]; then
+  . ~/.config/exercism/exercism_completion.zsh
+fi
 # export RANGER_LOAD_DEFAULT_RC=FALSE
