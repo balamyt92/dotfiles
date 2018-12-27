@@ -87,6 +87,8 @@ bindkey '^ ' autosuggest-accept
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias v="vim"
+alias gitlog="git log --graph --abbrev-commit --decorate --all --format=format:\"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)\""
+
 RPROMPT="%(?,%{$fg[green]%}^_^%{$reset_color%},%{$fg[red]%}O_o%{$reset_color%}"
 
 export NVM_DIR="/home/medvedev/.nvm"
