@@ -16,6 +16,35 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock # So that Traefik can listen to the Docker events
       - ./traefik.toml:/etc/traefik/traefik.toml
       - /acme
+  mysql:
+    restart: always
+    image: mysql:5.7
+    volumes:
+      - ./app/docker/mysql:/var/lib/mysql
+    environment:
+      - "MYSQL_ROOT_PASSWORD=root"
+      - "MYSQL_USER=root"
+      - "MYSQL_PASSWORD=root"
+    ports:
+      - "33061:3306"
+    networks:
+      - internal
+      - web
+  phpmyadmin:
+    restart: always
+    image: phpmyadmin/phpmyadmin:4.7
+    labels:
+      - traefik.enable=true
+      - traefik.backend=phpmyadmin
+      - traefik.frontend.rule=Host:phpadmin.docker.localhost
+      - traefik.docker.network=web
+    networks:
+      - web
+      - internal
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: root
+      PMA_PASSWORD: root
 
 networks:
   web:

@@ -1,4 +1,5 @@
 .idea
+docker/app
 
 # CMake
 cmake-build-*/
